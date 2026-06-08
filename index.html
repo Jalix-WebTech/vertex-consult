@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vertex Consult - Premium Architecture, Building Design, Construction Consultancy, Interior & Exterior Design. Crafting iconic spaces that define skylines." />
+  <meta name="keywords" content="architecture, building design, construction, interior design, exterior design, landscape design, urban planning, consultancy, Nigeria, Vertex Consult" />
+  <meta name="author" content="Jalixon" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="Vertex Consult | Premium Architecture & Design" />
+  <meta property="og:description" content="Crafting iconic spaces that define skylines. Premium architecture and building consultancy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.pexels.com/photos/35142390/pexels-photo-35142390.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" />
+
+  <title>Vertex Consult | Premium Architecture & Design Consultancy</title>
+
+  <!-- Favicon & Apple Touch Icon — uses the official Vertex Consult logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+  <link rel="apple-touch-icon" href="assets/images/logo.svg" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress -->
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Toast notification container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Mobile nav backdrop -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ============================================================
+       SPLASH SCREEN
+       ============================================================ -->
+  <div id="splash" role="status" aria-label="Loading Vertex Consult">
+    <div class="splash-logo-wrap">
+      <div class="splash-logo">
+        <img src="assets/images/logo.svg" alt="Vertex Consult Logo" />
+      </div>
+      <div class="splash-ring"></div>
+      <div class="splash-ring"></div>
+      <div class="splash-ring"></div>
+    </div>
+    <div class="splash-name">VERTEX</div>
+    <div class="splash-tag">Architecture · Design · Excellence</div>
+    <div class="splash-loader">
+      <div class="splash-loader-bar" id="splashBar"></div>
+      <span class="splash-percent" id="splashPercent">0%</span>
+    </div>
+    <div class="splash-dev">
+      <div>Developed by <a href="https://jalixon.vercel.app/" target="_blank" rel="noopener noreferrer">Jalixon</a></div>
+      <a href="https://jalixon.vercel.app/" target="_blank" rel="noopener noreferrer" class="splash-portfolio-btn">View Portfolio →</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Vertex Consult Home">
+        <img src="assets/images/logo.svg" alt="Vertex Consult" />
+        <span>VERTEX<span style="color:var(--accent-gold)">.</span></span>
+      </a>
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#home" data-num="01" class="active">Home</a>
+        <a href="#about" data-num="02">About</a>
+        <a href="#services" data-num="03">Services</a>
+        <a href="#portfolio" data-num="04">Portfolio</a>
+        <a href="#ceo" data-num="05">CEO</a>
+        <a href="#testimonials" data-num="06">Testimonials</a>
+        <a href="#booking" data-num="07">Booking</a>
+        <a href="#contact" data-num="08">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-float hero-float-1" aria-hidden="true"></div>
+    <div class="hero-float hero-float-2" aria-hidden="true"></div>
+    <div class="hero-float hero-float-3" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Architecture · Design · Excellence</div>
+      <h1 class="hero-title">Shaping <em>Iconic</em><br />Tomorrow's Skyline</h1>
+      <p class="hero-desc">Vertex Consult delivers visionary architectural solutions — blending timeless design with modern engineering to create spaces that inspire, endure, and elevate the human experience.</p>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-border-all"></i> View Portfolio</a>
+        <a href="#booking" class="btn btn-outline"><i class="fa-regular fa-calendar"></i> Book Consultation</a>
+        <a href="https://wa.me/2340000000000?text=Hello%20Vertex%20Consult%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span>Location</span>Uyo, Nigeria</div>
+      <div class="hero-meta-item"><span>Est.</span>Since 2009</div>
+      <div class="hero-meta-item"><span>Projects</span>250+ Worldwide</div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MARQUEE TICKER
+       ============================================================ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Architectural Design</span><span>Interior Mastery</span><span>Urban Planning</span><span>Landscape Architecture</span><span>Construction Consultancy</span><span>Project Supervision</span><span>Renovation Experts</span><span>Sustainable Design</span>
+      <span>Architectural Design</span><span>Interior Mastery</span><span>Urban Planning</span><span>Landscape Architecture</span><span>Construction Consultancy</span><span>Project Supervision</span><span>Renovation Experts</span><span>Sustainable Design</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="section-padding" id="about">
+    <span class="section-number" aria-hidden="true">01</span>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://images.pexels.com/photos/18273251/pexels-photo-18273251.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1000&w=800" alt="Vertex Consult studio interior - luxury design workspace" loading="lazy" />
+          <div class="about-experience-badge"><strong>15+</strong><span>Years of<br/>Excellence</span></div>
+        </div>
+        <div class="about-content reveal reveal-delay-2">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">Redefining <span class="gold-text">Architectural</span> Excellence</h2>
+          <p>Founded on the principles of innovation, integrity, and impeccable craftsmanship, Vertex Consult is a premier architecture and building consultancy firm based in Akwa Ibom State, Nigeria.</p>
+          <p>We specialize in transforming visionary concepts into enduring built environments — seamlessly blending aesthetic sophistication with structural integrity, sustainability, and functionality.</p>
+          <p>From residential sanctuaries to commercial landmarks, our multidisciplinary team delivers tailored solutions that honor context, culture, and client aspirations.</p>
+          <div class="about-stats">
+            <div class="stat-item"><span class="stat-num" data-target="250">0</span><span class="stat-label">Projects</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="180">0</span><span class="stat-label">Clients</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="15">0</span><span class="stat-label">Years</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="40">0</span><span class="stat-label">Awards</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:7rem;">
+        <span class="section-label">Our Foundation</span>
+        <h2 class="section-title">Vision · Mission · <span class="gold-text">Values</span></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal"><span class="value-num">01</span><div class="value-icon"><i class="fa-solid fa-eye"></i></div><h4>Vision</h4><p>To be Africa's most trusted architectural brand, setting global standards in design excellence and sustainable innovation.</p></div>
+        <div class="value-card reveal reveal-delay-1"><span class="value-num">02</span><div class="value-icon"><i class="fa-solid fa-bullseye"></i></div><h4>Mission</h4><p>Deliver transformative architectural solutions through creative mastery, technical precision, and unwavering client partnership.</p></div>
+        <div class="value-card reveal reveal-delay-2"><span class="value-num">03</span><div class="value-icon"><i class="fa-solid fa-gem"></i></div><h4>Integrity</h4><p>We uphold the highest ethical standards, transparent communication, and accountability in every engagement.</p></div>
+        <div class="value-card reveal reveal-delay-3"><span class="value-num">04</span><div class="value-icon"><i class="fa-solid fa-leaf"></i></div><h4>Sustainability</h4><p>We champion eco-conscious design, integrating green technologies to create spaces that respect the environment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section class="section-padding" id="services">
+    <span class="section-number" aria-hidden="true">02</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Our Expertise</span>
+        <h2 class="section-title">Premium <span class="gold-text">Services</span></h2>
+        <p class="section-subtitle">Comprehensive architectural and consultancy services delivered by seasoned professionals with uncompromising attention to detail.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal"><span class="service-num">01 / 08</span><div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div><h3>Architectural Design</h3><p>Visionary concept development, schematic design, and detailed construction documentation.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-1"><span class="service-num">02 / 08</span><div class="service-icon"><i class="fa-solid fa-building-columns"></i></div><h3>Building Consultancy</h3><p>Strategic advisory on regulations, permits, feasibility studies, and construction best practices.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-2"><span class="service-num">03 / 08</span><div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div><h3>Construction Planning</h3><p>Meticulous project scheduling, resource allocation, and phased execution strategies.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-3"><span class="service-num">04 / 08</span><div class="service-icon"><i class="fa-solid fa-couch"></i></div><h3>Interior Design</h3><p>Luxury interior environments crafted with premium materials, bespoke furniture, and lighting.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal"><span class="service-num">05 / 08</span><div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div><h3>Exterior Design</h3><p>Striking façades, cladding solutions, and exterior treatments that define curb appeal.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-1"><span class="service-num">06 / 08</span><div class="service-icon"><i class="fa-solid fa-tree-city"></i></div><h3>Landscape Design</h3><p>Integrated outdoor spaces, gardens, and hardscapes that harmonize architecture with nature.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-2"><span class="service-num">07 / 08</span><div class="service-icon"><i class="fa-solid fa-user-gear"></i></div><h3>Project Supervision</h3><p>Hands-on site management, quality control, and contractor coordination.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-3"><span class="service-num">08 / 08</span><div class="service-icon"><i class="fa-solid fa-hammer"></i></div><h3>Renovation Planning</h3><p>Thoughtful revitalization of existing structures preserving heritage while introducing modernity.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO
+       ============================================================ -->
+  <section class="section-padding" id="portfolio">
+    <span class="section-number" aria-hidden="true">03</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Selected Works</span>
+        <h2 class="section-title">Featured <span class="gold-text">Projects</span></h2>
+        <p class="section-subtitle">Explore our curated collection of architectural masterpieces across residential, commercial, and public sectors.</p>
+      </div>
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+        <button class="filter-btn" data-filter="exterior">Exterior</button>
+        <button class="filter-btn" data-filter="landscape">Landscape</button>
+        <button class="filter-btn" data-filter="urban">Urban</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CEO PROFILE
+       ============================================================ -->
+  <section class="section-padding" id="ceo">
+    <span class="section-number" aria-hidden="true">04</span>
+    <div class="container">
+      <div class="ceo-grid">
+        <div class="ceo-image reveal">
+          <img src="https://images.pexels.com/photos/29995605/pexels-photo-29995605.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=900" alt="Chief Executive Officer, Vertex Consult" loading="lazy" />
+          <div class="ceo-badge"><h5>Chief Executive</h5><p>Founder &amp; Lead Architect</p></div>
+        </div>
+        <div class="ceo-info reveal reveal-delay-2">
+          <span class="section-label">Executive Leadership</span>
+          <h2>Meet Our <span class="gold-text">CEO</span></h2>
+          <h3 class="ceo-name">Arc. [CEO Name]</h3>
+          <div class="ceo-role">Founder · Principal Architect · FNIA</div>
+          <p class="ceo-bio">A visionary architect with over two decades of distinguished practice, our CEO founded Vertex Consult with a singular mission: to elevate the African architectural landscape through world-class design excellence.</p>
+          <p class="ceo-bio">A Fellow of the Nigerian Institute of Architects (FNIA) and registered practitioner with ARCON, the CEO brings a rare synthesis of creative genius and technical mastery. Having led landmark projects across West Africa, each endeavor is a testament to architecture's power to transform communities.</p>
+          <blockquote class="ceo-message">Architecture is not merely about structures — it is about crafting the backdrop of human life. At Vertex Consult, we do not just design buildings; we engineer legacies that outlive us, inspire our children, and honor the cultural tapestry of our continent.</blockquote>
+          <span class="ceo-signature">— Arc. [CEO Name]</span>
+          <div class="ceo-experience">
+            <div class="ceo-exp-item"><i class="fa-solid fa-award"></i><div><strong>20+</strong><span>Years Experience</span></div></div>
+            <div class="ceo-exp-item"><i class="fa-solid fa-trophy"></i><div><strong>40+</strong><span>Awards Won</span></div></div>
+            <div class="ceo-exp-item"><i class="fa-solid fa-globe"></i><div><strong>250+</strong><span>Projects Delivered</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="section-padding" id="testimonials">
+    <span class="section-number" aria-hidden="true">05</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Client Voices</span>
+        <h2 class="section-title">What Our <span class="gold-text">Clients Say</span></h2>
+      </div>
+      <div class="testimonials-wrap">
+        <button class="testimonial-nav testimonial-prev" id="tPrev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="testimonial-nav testimonial-next" id="tNext" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="testimonials-viewport">
+          <div class="testimonials-track" id="testimonialsTrack"></div>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOKING
+       ============================================================ -->
+  <section class="section-padding" id="booking">
+    <span class="section-number" aria-hidden="true">06</span>
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-info reveal">
+          <span class="section-label">Book Consultation</span>
+          <h2 class="section-title">Start Your <span class="gold-text">Project</span></h2>
+          <p>Ready to bring your vision to life? Schedule a private consultation with our senior architects. Pricing is tailored to each project's scope, complexity, and aspiration.</p>
+          <div class="booking-feature"><i class="fa-solid fa-shield-halved"></i><div><h4>Confidential Consultation</h4><p>Your project details are treated with absolute discretion and covered by NDA on request.</p></div></div>
+          <div class="booking-feature"><i class="fa-solid fa-handshake"></i><div><h4>Transparent Negotiation</h4><p>Flexible pricing structure adapted to your budget, timeline, and quality expectations.</p></div></div>
+          <div class="booking-feature"><i class="fa-solid fa-bolt"></i><div><h4>Rapid Response</h4><p>Dedicated consultant assigned within 24 hours of booking confirmation.</p></div></div>
+        </div>
+        <form class="booking-form reveal reveal-delay-2" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="bName">Full Name *</label><input type="text" id="bName" required autocomplete="name" placeholder="Your full name" /></div>
+            <div class="form-group"><label for="bPhone">Phone Number *</label><input type="tel" id="bPhone" required autocomplete="tel" placeholder="+234..."/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="bEmail">Email Address *</label><input type="email" id="bEmail" required autocomplete="email" placeholder="you@email.com" /></div>
+            <div class="form-group"><label for="bType">Project Type *</label>
+              <select id="bType" required>
+                <option value="">-- Select project type --</option>
+                <option>Residential Building</option><option>Commercial Building</option><option>Interior Design</option>
+                <option>Exterior / Landscape</option><option>Renovation</option><option>Urban Planning</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="bBudget">Budget Range</label>
+              <select id="bBudget">
+                <option value="">-- Select range --</option>
+                <option>Below ₦10 Million</option><option>₦10M – ₦50 Million</option><option>₦50M – ₦200 Million</option>
+                <option>₦200M – ₦500 Million</option><option>₦500 Million+</option><option>Negotiable</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="bDate">Preferred Date</label><input type="date" id="bDate" /></div>
+          </div>
+          <div class="form-group"><label for="bMsg">Project Brief / Message</label><textarea id="bMsg" rows="4" placeholder="Tell us about your vision, site details, and any specific requirements..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:.5rem;">
+            <i class="fa-brands fa-whatsapp"></i> Submit via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section-padding" id="contact">
+    <span class="section-number" aria-hidden="true">07</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Build <span class="gold-text">Together</span></h2>
+        <p class="section-subtitle">Visit our studio, connect on WhatsApp, or send us an email. We respond within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <a href="https://www.google.com/maps/search/Nung+Ikono+Ufok+Uruan+Akwa+Ibom" target="_blank" rel="noopener noreferrer" class="contact-card reveal"><i class="fa-solid fa-location-dot"></i><h4>Visit Us</h4><p>Nung Ikono Ufok, Uruan L.G.A.<br/>Akwa Ibom State, Uyo, Nigeria</p></a>
+        <a href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-1"><i class="fa-brands fa-whatsapp"></i><h4>WhatsApp</h4><p>Chat Instantly<br/>Available 24/7</p></a>
+        <a href="mailto:info@vertexconsult.com" class="contact-card reveal reveal-delay-2"><i class="fa-solid fa-envelope"></i><h4>Email</h4><p>info@vertexconsult.com<br/>Response within 24 hours</p></a>
+        <div class="contact-card reveal reveal-delay-3"><i class="fa-regular fa-clock"></i><h4>Business Hours</h4><p>Mon – Fri: 8:00 – 18:00<br/>Sat: 9:00 – 14:00</p></div>
+      </div>
+      <div class="map-placeholder" role="img" aria-label="Map placeholder showing Vertex Consult location">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <div><strong style="color:var(--text-primary); font-family:'Playfair Display',serif; font-size:1.2rem;">Vertex Consult Headquarters</strong></div>
+        <div>Uyo, Akwa Ibom State, Nigeria</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <img src="assets/images/logo.svg" alt="Vertex Consult" />
+            <span>VERTEX<span style="color:var(--accent-gold)">.</span></span>
+          </a>
+          <p>Premium architecture, design, and building consultancy. Crafting iconic spaces that define skylines and enrich communities across Africa.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Navigate</h5><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#ceo">Leadership</a></li></ul></div>
+        <div class="footer-col"><h5>Services</h5><ul><li><a href="#services">Architectural Design</a></li><li><a href="#services">Interior Design</a></li><li><a href="#services">Landscape Design</a></li><li><a href="#services">Construction</a></li><li><a href="#booking">Consultation</a></li></ul></div>
+        <div class="footer-col"><h5>Company</h5><ul><li><a href="#contact">Contact</a></li><li><a href="#booking">Book Consultation</a></li><li><a href="#testimonials">Client Reviews</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="yr"></span> Vertex Consult. All rights reserved.</div>
+        <div>Developed by <a href="https://jalixon.vercel.app/" target="_blank" rel="noopener noreferrer">Jalixon</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/2340000000000?text=Hello%20Vertex%20Consult!" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Vertex Consult on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- ============================================================
+       AI CHATBOT
+       ============================================================ -->
+  <button class="chatbot-float" id="chatbotToggle" aria-label="Open AI Assistant">
+    <i class="fa-solid fa-robot"></i>
+    <span class="notif-dot" aria-hidden="true"></span>
+  </button>
+  <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Vertex AI Assistant">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar"><i class="fa-solid fa-robot"></i></div>
+      <div><h4>Vertex AI</h4><span>● Online — Ask me anything</span></div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close assistant"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages"></div>
+    <div class="chatbot-quick" id="chatQuick">
+      <button data-q="What services do you offer?">Services</button>
+      <button data-q="How much does a project cost?">Pricing</button>
+      <button data-q="Where are you located?">Location</button>
+      <button data-q="How do I book a consultation?">Booking</button>
+    </div>
+    <form class="chatbot-input" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your message..." aria-label="Type your message" maxlength="300" autocomplete="off" />
+      <button type="submit" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-counter" id="lbCounter"></div>
+    <button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lbPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-next" id="lbNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    <img id="lbImage" src="" alt="Project preview" />
+    <div class="lightbox-caption" id="lbCaption"></div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
