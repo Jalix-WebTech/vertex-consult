@@ -317,7 +317,7 @@ ${msg || 'No additional details provided.'}
 
 — Submitted via vertexconsult.com`;
 
-    window.open(`https://wa.me/2340000000000?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/2349033165974?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
     toast('Redirecting you to WhatsApp...', 'success');
     bookingForm.reset();
     $$('.valid, .error', bookingForm).forEach(el => el.classList.remove('valid', 'error'));
